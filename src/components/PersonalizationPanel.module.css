@@ -154,3 +154,40 @@
 .logoutBtn:hover {
     background: rgba(255, 255, 255, 0.05);
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .panel {
+        width: 95vw;
+        max-width: 95vw;
+    }
+
+    .triggerButton {
+        bottom: 80px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .header h3 {
+        font-size: 1rem;
+    }
+
+    .body {
+        padding: 16px;
+    }
+
+    .authForm h4 {
+        font-size: 1.25rem;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .saveBtn,
+    .logoutBtn {
+        width: 100%;
+    }
+}

@@ -149,3 +149,42 @@
     opacity: 1;
   }
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .chatWindow {
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+    max-height: 100vh;
+  }
+
+  .toggleButton {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .selectionButton {
+    bottom: 80px;
+    right: 20px;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  .chatHeader h3 {
+    font-size: 1rem;
+  }
+
+  .chatBody {
+    padding: 12px;
+  }
+
+  .message {
+    font-size: 0.85rem;
+    max-width: 85%;
+  }
+}
