@@ -1,0 +1,160 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Premium Color Palette & Variables */
+:root {
+  /* Deep Blue/Teal Theme */
+  --ifm-color-primary: #00d4ff;
+  /* Bright Cyan/Blue */
+  --ifm-color-primary-dark: #00bfe6;
+  --ifm-color-primary-darker: #00b5da;
+  --ifm-color-primary-darkest: #0095b3;
+  --ifm-color-primary-light: #26dbff;
+  --ifm-color-primary-lighter: #39dfff;
+  --ifm-color-primary-lightest: #70e9ff;
+
+  --ifm-background-color: #0f172a;
+  /* Slate 900 */
+  --ifm-background-surface-color: #1e293b;
+  /* Slate 800 */
+  --ifm-color-content: #f8fafc;
+  /* Slate 50 */
+
+  --glass-bg: rgba(30, 41, 59, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-navbar-background-color: rgba(15, 23, 42, 0.8);
+  --ifm-navbar-shadow: none;
+}
+
+[data-theme='light'] {
+  --ifm-color-primary: #006d8f;
+  --ifm-color-primary-dark: #006280;
+  --ifm-color-primary-darker: #005c79;
+  --ifm-color-primary-darkest: #004c63;
+  --ifm-color-primary-light: #00789e;
+  --ifm-color-primary-lighter: #007ea5;
+  --ifm-color-primary-lightest: #0090bd;
+
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f1f5f9;
+  /* Slate 100 */
+  --ifm-color-content: #0f172a;
+
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Global Styles */
+body {
+  background-image: radial-gradient(circle at 50% 0%, rgba(0, 212, 255, 0.15), transparent 40%);
+  background-attachment: fixed;
+}
+
+.navbar {
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+}
+
+/* Hero Section Styles */
+.heroBanner {
+  padding: 8rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+.hero__title {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(to right, var(--ifm-color-primary), #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  color: var(--ifm-color-content);
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.button--primary {
+  background: linear-gradient(135deg, var(--ifm-color-primary), #00b5da);
+  border: none;
+  box-shadow: 0 4px 14px rgba(0, 212, 255, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.6);
+}
+
+/* Features Grid */
+.features-section {
+  padding: 4rem 0;
+}
+
+.feature-card {
+  padding: 2rem;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 996px) {
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  .heroBanner {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .glass-panel {
+    margin-bottom: 1rem;
+  }
+}

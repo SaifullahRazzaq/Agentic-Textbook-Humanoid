@@ -1,0 +1,291 @@
+[
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 1 ---   "
+  },
+  {
+    "title": "Robotics Evolution",
+    "content": "From industrial arms to humanoid robots.  ",
+    "source": "01-introduction"
+  },
+  {
+    "title": "Physical AI vs Digital AI",
+    "content": "Understanding the difference between AI in the cloud and AI in the physical world.  ",
+    "source": "01-introduction"
+  },
+  {
+    "title": "Human-Robot Collaboration",
+    "content": "How humans and robots work together.  ",
+    "source": "01-introduction"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 2 ---   "
+  },
+  {
+    "title": "Anatomy",
+    "content": "Understanding the physical structure of humanoid robots.  ",
+    "source": "02-humanoid-basics"
+  },
+  {
+    "title": "Actuators",
+    "content": "Motors, hydraulics, and artificial muscles.  ",
+    "source": "02-humanoid-basics"
+  },
+  {
+    "title": "Sensors",
+    "content": "Proprioception and exteroception.  ",
+    "source": "02-humanoid-basics"
+  },
+  {
+    "title": "Kinematics & Dynamics",
+    "content": "The math of motion.  ",
+    "source": "02-humanoid-basics"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 3 ---   "
+  },
+  {
+    "title": "Vision",
+    "content": "Cameras, depth sensing, and computer vision.  ",
+    "source": "03-perception-sensing"
+  },
+  {
+    "title": "LiDAR",
+    "content": "Laser scanning for 3D mapping.  ",
+    "source": "03-perception-sensing"
+  },
+  {
+    "title": "Tactile Sensors",
+    "content": "Touch and force sensing.  ",
+    "source": "03-perception-sensing"
+  },
+  {
+    "title": "Sensor Fusion",
+    "content": "Combining data from multiple sources.  ",
+    "source": "03-perception-sensing"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 4 ---   "
+  },
+  {
+    "title": "Classical Control",
+    "content": "PID controllers and feedback loops.  ",
+    "source": "04-control-motion-planning"
+  },
+  {
+    "title": "AI-Based Control",
+    "content": "Reinforcement learning for locomotion.  ",
+    "source": "04-control-motion-planning"
+  },
+  {
+    "title": "Trajectory Optimization",
+    "content": "Planning smooth paths.  ",
+    "source": "04-control-motion-planning"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 5 ---   "
+  },
+  {
+    "title": "Ethics",
+    "content": "Safety and moral considerations.  ",
+    "source": "05-human-robot-interaction"
+  },
+  {
+    "title": "Collaborative Robots",
+    "content": "Cobots in the workplace.  ",
+    "source": "05-human-robot-interaction"
+  },
+  {
+    "title": "Social Intelligence",
+    "content": "Emotion recognition and response.  ",
+    "source": "05-human-robot-interaction"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 6 ---   "
+  },
+  {
+    "title": "Embedding AI Agents",
+    "content": "Running LLMs on-device vs cloud.  ",
+    "source": "06-ai-integration"
+  },
+  {
+    "title": "Multi-Agent Systems",
+    "content": "Coordinating multiple robots.  ",
+    "source": "06-ai-integration"
+  },
+  {
+    "title": "Real-World Deployment",
+    "content": "Challenges of the physical world.  ",
+    "source": "06-ai-integration"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 7 ---   "
+  },
+  {
+    "title": "Build a Humanoid",
+    "content": "Step-by-step guide to building a simple humanoid robot.  ",
+    "source": "07-projects-labs"
+  },
+  {
+    "title": "Motion Control Lab",
+    "content": "Experiments with servo motors.  ",
+    "source": "07-projects-labs"
+  },
+  {
+    "title": "AI Task Execution",
+    "content": "Programming a robot to perform a task.  ",
+    "source": "07-projects-labs"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 8 ---   "
+  },
+  {
+    "title": "Swarm Robotics",
+    "content": "Collective behavior of simple robots.  ",
+    "source": "08-future-trends"
+  },
+  {
+    "title": "BCIs",
+    "content": "Brain-Computer Interfaces for robot control.  ",
+    "source": "08-future-trends"
+  },
+  {
+    "title": "Physical AI in Industry & Healthcare",
+    "content": "Applications and impact.  ",
+    "source": "08-future-trends"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 1 ---   Let's discover **Docusaurus in less than 5 minutes**.  "
+  },
+  {
+    "title": "Getting Started",
+    "content": " Get started by **creating a new site**.  Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.  ### What you'll need  - [Node.js](https://nodejs.org/en/download/) version 20.0 or above:   - When installing Node.js, you are recommended to check all checkboxes related to dependencies.  ",
+    "source": "intro"
+  },
+  {
+    "title": "Generate a new site",
+    "content": " Generate a new Docusaurus site using the **classic template**.  The classic template will automatically be added to your project after you run the command:  ```bash npm init docusaurus@latest my-website classic ```  You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.  The command also installs all necessary dependencies you need to run Docusaurus.  ",
+    "source": "intro"
+  },
+  {
+    "title": "Start your site",
+    "content": " Run the development server:  ```bash cd my-website npm run start ```  The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.  The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.  Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.  ",
+    "source": "intro"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 6 ---   You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.  Docusaurus has **much more to offer**!  Have **5 more minutes**? Take a look at **[versioning](../tutorial-extras/manage-docs-versions.md)** and **[i18n](../tutorial-extras/translate-your-site.md)**.  Anything **unclear** or **buggy** in this tutorial? [Please report it!](https://github.com/facebook/docusaurus/discussions/4610)  "
+  },
+  {
+    "title": "What's next?",
+    "content": " - Read the [official documentation](https://docusaurus.io/) - Modify your site configuration with [`docusaurus.config.js`](https://docusaurus.io/docs/api/docusaurus-config) - Add navbar and footer items with [`themeConfig`](https://docusaurus.io/docs/api/themes/configuration) - Add a custom [Design and Layout](https://docusaurus.io/docs/styling-layout) - Add a [search bar](https://docusaurus.io/docs/search) - Find inspirations in the [Docusaurus showcase](https://docusaurus.io/showcase) - Get involved in the [Docusaurus Community](https://docusaurus.io/community/support)  ",
+    "source": "congratulations"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 3 ---   Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...  "
+  },
+  {
+    "title": "Create your first Post",
+    "content": " Create a file at `blog/2021-02-28-greetings.md`:  ```md title=\"blog/2021-02-28-greetings.md\" --- slug: greetings title: Greetings! authors:   - name: Joel Marcey     title: Co-creator of Docusaurus 1     url: https://github.com/JoelMarcey     image_url: https://github.com/JoelMarcey.png   - name: Sébastien Lorber     title: Docusaurus maintainer     url: https://sebastienlorber.com     image_url: https://github.com/slorber.png tags: [greetings] ---  Congratulations, you have made your first post!  Feel free to play around and edit this post as much as you like. ```  A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).  ",
+    "source": "create-a-blog-post"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 2 ---   Documents are **groups of pages** connected through:  - a **sidebar** - **previous/next navigation** - **versioning**  "
+  },
+  {
+    "title": "Create your first Doc",
+    "content": " Create a Markdown file at `docs/hello.md`:  ```md title=\"docs/hello.md\"  This is my **first Docusaurus document**! ```  A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).  ",
+    "source": "create-a-document"
+  },
+  {
+    "title": "Configure the Sidebar",
+    "content": " Docusaurus automatically **creates a sidebar** from the `docs` folder.  Add metadata to customize the sidebar label and position:  ```md title=\"docs/hello.md\" {1-4} --- sidebar_label: 'Hi!' sidebar_position: 3 ---   This is my **first Docusaurus document**! ```  It is also possible to create your sidebar explicitly in `sidebars.js`:  ```js title=\"sidebars.js\" export default {   tutorialSidebar: [     'intro',     // highlight-next-line     'hello',     {       type: 'category',       label: 'Tutorial',       items: ['tutorial-basics/create-a-document'],     },   ], }; ```  ",
+    "source": "create-a-document"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 1 ---   Add **Markdown or React** files to `src/pages` to create a **standalone page**:  - `src/pages/index.js` → `localhost:3000/` - `src/pages/foo.md` → `localhost:3000/foo` - `src/pages/foo/bar.js` → `localhost:3000/foo/bar`  "
+  },
+  {
+    "title": "Create your first React Page",
+    "content": " Create a file at `src/pages/my-react-page.js`:  ```jsx title=\"src/pages/my-react-page.js\" import React from 'react'; import Layout from '@theme/Layout';  export default function MyReactPage() {   return (     <Layout>       <h1>My React page</h1>       <p>This is a React page</p>     </Layout>   ); } ```  A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).  ",
+    "source": "create-a-page"
+  },
+  {
+    "title": "Create your first Markdown Page",
+    "content": " Create a file at `src/pages/my-markdown-page.md`:  ```mdx title=\"src/pages/my-markdown-page.md\"  This is a Markdown page ```  A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page).  ",
+    "source": "create-a-page"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 5 ---   Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).  It builds your site as simple **static HTML, JavaScript and CSS files**.  "
+  },
+  {
+    "title": "Build your site",
+    "content": " Build your site **for production**:  ```bash npm run build ```  The static files are generated in the `build` folder.  ",
+    "source": "deploy-your-site"
+  },
+  {
+    "title": "Deploy your site",
+    "content": " Test your production build locally:  ```bash npm run serve ```  The `build` folder is now served at [http://localhost:3000/](http://localhost:3000/).  You can now deploy the `build` folder **almost anywhere** easily, **for free** or very small cost (read the **[Deployment Guide](https://docusaurus.io/docs/deployment)**).  ",
+    "source": "deploy-your-site"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 1 ---   Docusaurus can manage multiple versions of your docs.  "
+  },
+  {
+    "title": "Create a docs version",
+    "content": " Release a version 1.0 of your project:  ```bash npm run docusaurus docs:version 1.0 ```  The `docs` folder is copied into `versioned_docs/version-1.0` and `versions.json` is created.  Your docs now have 2 versions:  - `1.0` at `http://localhost:3000/docs/` for the version 1.0 docs - `current` at `http://localhost:3000/docs/next/` for the **upcoming, unreleased docs**  ",
+    "source": "manage-docs-versions"
+  },
+  {
+    "title": "Add a Version Dropdown",
+    "content": " To navigate seamlessly across versions, add a version dropdown.  Modify the `docusaurus.config.js` file:  ```js title=\"docusaurus.config.js\" export default {   themeConfig: {     navbar: {       items: [         // highlight-start         {           type: 'docsVersionDropdown',         },         // highlight-end       ],     },   }, }; ```  The docs version dropdown appears in your navbar:  ![Docs Version Dropdown](./img/docsVersionDropdown.png)  ",
+    "source": "manage-docs-versions"
+  },
+  {
+    "title": "Update an existing version",
+    "content": " It is possible to edit versioned docs in their respective folder:  - `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello` - `docs/hello.md` updates `http://localhost:3000/docs/next/hello`  ",
+    "source": "manage-docs-versions"
+  },
+  {
+    "title": "General",
+    "content": "--- sidebar_position: 2 ---   Let's translate `docs/intro.md` to French.  "
+  },
+  {
+    "title": "Configure i18n",
+    "content": " Modify `docusaurus.config.js` to add support for the `fr` locale:  ```js title=\"docusaurus.config.js\" export default {   i18n: {     defaultLocale: 'en',     locales: ['en', 'fr'],   }, }; ```  ",
+    "source": "translate-your-site"
+  },
+  {
+    "title": "Translate a doc",
+    "content": " Copy the `docs/intro.md` file to the `i18n/fr` folder:  ```bash mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/  cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md ```  Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.  ",
+    "source": "translate-your-site"
+  },
+  {
+    "title": "Start your localized site",
+    "content": " Start your site on the French locale:  ```bash npm run start -- --locale fr ```  Your localized site is accessible at [http://localhost:3000/fr/](http://localhost:3000/fr/) and the `Getting Started` page is translated.  :::caution  In development, you can only use one locale at a time.  :::  ",
+    "source": "translate-your-site"
+  },
+  {
+    "title": "Add a Locale Dropdown",
+    "content": " To navigate seamlessly across languages, add a locale dropdown.  Modify the `docusaurus.config.js` file:  ```js title=\"docusaurus.config.js\" export default {   themeConfig: {     navbar: {       items: [         // highlight-start         {           type: 'localeDropdown',         },         // highlight-end       ],     },   }, }; ```  The locale dropdown now appears in your navbar:  ![Locale Dropdown](./img/localeDropdown.png)  ",
+    "source": "translate-your-site"
+  },
+  {
+    "title": "Build your localized site",
+    "content": " Build your site for a specific locale:  ```bash npm run build -- --locale fr ```  Or build your site to include all the locales at once:  ```bash npm run build ```  ",
+    "source": "translate-your-site"
+  }
+]
