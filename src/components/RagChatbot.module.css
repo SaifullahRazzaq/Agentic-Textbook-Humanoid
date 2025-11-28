@@ -17,6 +17,9 @@
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .toggleButton:hover {
@@ -66,6 +69,8 @@
   max-width: 80%;
   font-size: 0.9rem;
   line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .bot {
@@ -94,6 +99,7 @@
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 20px;
   outline: none;
+  font-size: 0.9rem;
 }
 
 .chatInput button {
@@ -104,6 +110,7 @@
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .selectionButton {
@@ -119,6 +126,8 @@
   cursor: pointer;
   z-index: 998;
   animation: popIn 0.3s ease;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .contextPreview {
@@ -136,6 +145,15 @@
   border: none;
   color: var(--ifm-color-content);
   cursor: pointer;
+  padding: 4px 8px;
+  font-size: 1rem;
+}
+
+.typingIndicator {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  font-style: italic;
+  padding: 8px;
 }
 
 @keyframes popIn {
@@ -150,6 +168,19 @@
   }
 }
 
+/* Tablet Responsiveness */
+@media (max-width: 996px) {
+  .chatWindow {
+    width: 320px;
+    height: 450px;
+  }
+
+  .selectionButton {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
   .chatWindow {
@@ -157,22 +188,27 @@
     height: 100vh;
     bottom: 0;
     right: 0;
+    left: 0;
     border-radius: 0;
     max-height: 100vh;
+    position: fixed;
   }
 
   .toggleButton {
     bottom: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
+    width: 56px;
+    height: 56px;
+    font-size: 22px;
   }
 
   .selectionButton {
-    bottom: 80px;
+    bottom: 90px;
     right: 20px;
+    left: 20px;
     font-size: 0.85rem;
-    padding: 8px 16px;
+    padding: 10px 16px;
+    text-align: center;
   }
 
   .chatHeader h3 {
@@ -186,5 +222,47 @@
   .message {
     font-size: 0.85rem;
     max-width: 85%;
+    padding: 8px 12px;
+  }
+
+  .chatInput {
+    padding: 12px;
+  }
+
+  .chatInput input {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+
+  .chatInput button {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  .contextPreview {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 375px) {
+  .toggleButton {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .message {
+    font-size: 0.8rem;
+  }
+
+  .chatInput input {
+    font-size: 0.85rem;
+  }
+
+  .chatInput button {
+    font-size: 0.85rem;
+    padding: 8px 14px;
   }
 }
