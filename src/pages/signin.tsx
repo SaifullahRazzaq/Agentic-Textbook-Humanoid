@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import styles from '../css/auth.module.css';
-import { authClient } from '../lib/auth-client';
+import { useAuthClient } from '@theme/Root'; // Import useAuthClient from Root.js
 import Link from '@docusaurus/Link';
 import { useHistory } from '@docusaurus/router';
 
@@ -10,6 +10,7 @@ export default function Signin() {
         email: '',
         password: ''
     });
+    const authClient = useAuthClient(); // Get authClient from context
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const history = useHistory();
@@ -30,17 +31,10 @@ export default function Signin() {
             await authClient.signIn.email({
                 email: formData.email,
                 password: formData.password,
-            }, {
-                onSuccess: () => {
-                    history.push('/');
-                },
-                onError: (ctx) => {
-                    setError(ctx.error.message);
-                    setLoading(false);
-                }
             });
-        } catch (err) {
-            setError('An unexpected error occurred');
+            history.push('/');
+        } catch (err: any) {
+            setError(err.message || 'An unexpected error occurred');
             setLoading(false);
         }
     };
@@ -81,6 +75,10 @@ export default function Signin() {
                                 required
                                 placeholder="••••••••"
                             />
+                        </div>
+
+                        <div className={styles.textRight}>
+                          <Link to="/forgotpassword" className={styles.link}>Forgot Password?</Link>
                         </div>
 
                         <button className={styles.button} type="submit" disabled={loading}>

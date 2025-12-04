@@ -20,13 +20,17 @@
     "@mdx-js/react": "^3.0.0",
     "better-auth": "^1.4.3",
     "clsx": "^2.0.0",
+    "hono-rate-limiter": "^0.4.2",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-intersection-observer": "^10.0.0",
+    "react-type-animation": "^3.2.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.9.2",
-    "@docusaurus/types": "3.9.2"
+    "@docusaurus/types": "3.9.2",
+    "@types/better-sqlite3": "^7.6.13"
   },
   "browserslist": {
     "production": [

@@ -4,8 +4,7 @@ import styles from './RagChatbot.module.css';
 import chatIndex from './chat-index.json';
 import { executeSkill } from '../utils/SkillRegistry';
 
-export default function RagChatbot() {
-    const [isOpen, setIsOpen] = useState(false);
+export default function RagChatbot({ isOpen, onClose }) {
     const [messages, setMessages] = useState([
         { text: 'Hello! Ask me anything about the textbook.', sender: 'bot' }
     ]);
@@ -26,8 +25,6 @@ export default function RagChatbot() {
         document.addEventListener('mouseup', handleSelection);
         return () => document.removeEventListener('mouseup', handleSelection);
     }, []);
-
-    const toggleChat = () => setIsOpen(!isOpen);
 
     const findAnswer = (query, context) => {
         // If we have selected text context, prioritize it
@@ -58,7 +55,9 @@ export default function RagChatbot() {
         });
 
         if (maxScore > 0 && bestMatch) {
-            return `**From ${bestMatch.title}**: ${bestMatch.content}`;
+            // Construct a Docusaurus-friendly URL from the source field
+            const docLink = bestMatch.source ? `/docs/${bestMatch.source}` : '#';
+            return `**From [${bestMatch.title}](${docLink})**: ${bestMatch.content}`;
         }
         return "I couldn't find specific information about that in the textbook. Try asking about specific chapters or topics like 'sensors' or 'control'.";
     };
@@ -89,8 +88,8 @@ export default function RagChatbot() {
         setInput('');
         setIsTyping(true);
 
-        // If closed, open it
-        if (!isOpen) setIsOpen(true);
+        // If closed, open it (using onClose prop as a toggle)
+        if (!isOpen) onClose();
 
         // Simulate network delay
         setTimeout(() => {
@@ -114,7 +113,7 @@ export default function RagChatbot() {
             )}
 
             <div className={clsx(styles.chatbotContainer, { [styles.open]: isOpen })}>
-                <button className={styles.toggleButton} onClick={toggleChat}>
+                <button className={styles.toggleButton} onClick={onClose}>
                     {isOpen ? '✕' : '💬'}
                 </button>
                 {isOpen && (

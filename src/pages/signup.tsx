@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import styles from '../css/auth.module.css';
-import { authClient } from '../lib/auth-client';
+import { useAuthClient } from '@theme/Root'; // Import useAuthClient from Root.js
 import Link from '@docusaurus/Link';
 import { useHistory } from '@docusaurus/router';
 
@@ -10,14 +10,15 @@ export default function Signup() {
         name: '',
         email: '',
         password: '',
-        softwareBackground: '',
-        hardwareBackground: ''
+        softwareBackground: 'none',
+        learningGoal: 'general'
     });
+    const authClient = useAuthClient(); // Get authClient from context
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const history = useHistory();
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
@@ -33,20 +34,21 @@ export default function Signup() {
             await authClient.signUp.email({
                 email: formData.email,
                 password: formData.password,
-                name: formData.name,
-                softwareBackground: formData.softwareBackground, // Custom field
-                hardwareBackground: formData.hardwareBackground, // Custom field
-            } as any, {
-                onSuccess: () => {
-                    history.push('/');
-                },
-                onError: (ctx) => {
-                    setError(ctx.error.message);
-                    setLoading(false);
-                }
+                // During initial sign-up, we only pass email and password.
+                // Profile fields like background and goal are updated post-signup or via personalization panel.
             });
-        } catch (err) {
-            setError('An unexpected error occurred');
+            // After successful signup, you might want to redirect or show a success message
+            // For now, let's redirect to the main page.
+            history.push('/');
+
+            // Optionally, update the profile with initial preferences after signup
+            await authClient.user.profile.set({
+                softwareBackground: formData.softwareBackground,
+                learningGoal: formData.learningGoal,
+            });
+
+        } catch (err: any) {
+            setError(err.message || 'An unexpected error occurred');
             setLoading(false);
         }
     };
@@ -105,27 +107,36 @@ export default function Signup() {
                         </div>
 
                         <div className={styles.formGroup}>
-                            <label className={styles.label} htmlFor="softwareBackground">Software Background</label>
-                            <textarea
-                                className={styles.textarea}
+                            <label className={styles.label} htmlFor="softwareBackground">Your Background</label>
+                            <select
+                                className={styles.input}
                                 id="softwareBackground"
                                 name="softwareBackground"
                                 value={formData.softwareBackground}
                                 onChange={handleChange}
-                                placeholder="Tell us about your coding experience..."
-                            />
+                                required
+                            >
+                                <option value="none">Select your background</option>
+                                <option value="software">Software Engineer</option>
+                                <option value="hardware">Hardware/Robotics</option>
+                                <option value="student">Student</option>
+                            </select>
                         </div>
 
                         <div className={styles.formGroup}>
-                            <label className={styles.label} htmlFor="hardwareBackground">Hardware Background</label>
-                            <textarea
-                                className={styles.textarea}
-                                id="hardwareBackground"
-                                name="hardwareBackground"
-                                value={formData.hardwareBackground}
+                            <label className={styles.label} htmlFor="learningGoal">Learning Goal</label>
+                            <select
+                                className={styles.input}
+                                id="learningGoal"
+                                name="learningGoal"
+                                value={formData.learningGoal}
                                 onChange={handleChange}
-                                placeholder="Any experience with robotics or electronics?"
-                            />
+                                required
+                            >
+                                <option value="general">Select your learning goal</option>
+                                <option value="build">Build a Robot</option>
+                                <option value="research">Academic Research</option>
+                            </select>
                         </div>
 
                         <button className={styles.button} type="submit" disabled={loading}>

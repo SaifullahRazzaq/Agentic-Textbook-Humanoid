@@ -20,18 +20,32 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://waleedjawaid.github.io',
+  url: 'https://SaifullahRazzaq.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
+  customFields: {
+    betterAuthBaseURL: process.env.NEXT_PUBLIC_BETTER_AUTH_URL || 'http://localhost:3001',
+  },
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'waleedjawaid', // Usually your GitHub org/user name.
+  organizationName: 'SaifullahRazzaq', // Usually your GitHub org/user name.
   projectName: 'physical-ai-humanoid-robotics', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        'http-equiv': 'Content-Security-Policy',
+        content: "img-src 'self' data: https://images.unsplash.com https://images.pexels.com;",
+      },
+    },
+  ],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -62,7 +76,10 @@ const config = {
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: false, // Disable blog
+        blog: {
+          showReadingTime: true,
+          editUrl: 'https://github.com/SaifullahRazzaq/physical-ai-humanoid-robotics/tree/main/blog',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -114,6 +131,19 @@ const config = {
           {
             title: 'Community',
             items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/SaifullahRazzaq',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'Blog',
+                to: '/blog',
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/SaifullahRazzaq',

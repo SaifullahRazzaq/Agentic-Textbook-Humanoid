@@ -1,15 +1,22 @@
 import React from 'react';
-import { useUser } from '../contexts/UserContext';
+import { useAuthClient } from '@theme/Root'; // Import useAuthClient from Root.js
 
 export default function DynamicContent({ forBackground, forGoal, children }) {
-    const { user } = useUser();
-    const { background, goal } = user.preferences;
+    const authClient = useAuthClient(); // Get authClient from context
+    const { data: session, isPending } = authClient.useSession();
+    const user = session?.data;
 
-    if (forBackground && forBackground !== background) {
+    if (isPending || !user || !user.profile) {
+        return null; // Or render a loading state/default content
+    }
+
+    const { softwareBackground, learningGoal } = user.profile;
+
+    if (forBackground && forBackground !== softwareBackground) {
         return null;
     }
 
-    if (forGoal && forGoal !== goal) {
+    if (forGoal && forGoal !== learningGoal) {
         return null;
     }
 
@@ -22,7 +29,7 @@ export default function DynamicContent({ forBackground, forGoal, children }) {
             borderRadius: '0 8px 8px 0'
         }}>
             <div style={{ fontSize: '0.8rem', color: 'var(--ifm-color-primary)', fontWeight: 'bold', marginBottom: '0.5rem' }}>
-                🎯 Personalized for {background === 'software' ? 'Software Engineers' : background}
+                🎯 Personalized for {softwareBackground === 'software' ? 'Software Engineers' : softwareBackground}
             </div>
             {children}
         </div>

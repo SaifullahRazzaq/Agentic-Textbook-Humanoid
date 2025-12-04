@@ -17,3 +17,11 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+blog:
+  label: Blog
+  permalink: /blog
+  description: All blog posts
+english:
+  label: English
+  permalink: /english
+  description: English language posts

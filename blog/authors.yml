@@ -23,3 +23,13 @@ slorber:
     linkedin: sebastienlorber
     github: slorber
     newsletter: https://thisweekinreact.com
+
+SaifullahRazzaq:
+  name: Saifullah Razzaq
+  title: Physical AI & Humanoid Robotics Author
+  url: https://github.com/SaifullahRazzaq
+  image_url: https://github.com/SaifullahRazzaq.png
+  page: true
+  socials:
+    github: SaifullahRazzaq
+    linkedin: SaifullahRazzaq
