@@ -62,6 +62,9 @@ app.use("*", (0, cors_1.cors)({
 }));
 // Apply rate limiter to auth routes
 app.use("/api/auth/*", limiter);
+app.get("/", (c) => {
+    return c.json({ message: "Auth server is running!" });
+});
 app.on(["POST", "GET"], "/api/auth/**", (c) => {
     console.log(`[Auth] ${c.req.method} ${c.req.url}`);
     return auth.handler(c.req.raw);
